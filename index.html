@@ -517,3 +517,52 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>تعليقات</title>
+</head>
+<body>
+
+<h2>شاركنا تجربتك</h2>
+
+<form id="commentForm">
+  <input type="text" name="name" placeholder="الاسم" required><br><br>
+  <textarea name="comment" placeholder="اكتب رأيك..." required></textarea><br><br>
+  <button type="submit">إرسال</button>
+</form>
+
+<hr>
+
+<h3>آراء الزوار:</h3>
+<div id="comments"></div>
+
+<script>
+document.getElementById("commentForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let formData = new FormData(this);
+
+  fetch("save.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(() => {
+    loadComments();
+    this.reset();
+  });
+});
+
+function loadComments() {
+  fetch("fetch.php")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("comments").innerHTML = data;
+    });
+}
+
+loadComments();
+</script>
+
+</body>
+</html>
