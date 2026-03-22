@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شقة مفروشة للكراء اليومي - أزرو | Holiday Apartment Azrou</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Tajawal for beautiful Arabic typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#FFF5EB',
+                            DEFAULT: '#D97706', // Warm amber/orange matching the decor
+                            dark: '#92400E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/gps-cs-s/AHVAwerVptMewA-WVlamA1pwerG065zTWW_eJd92dk5AW5iKdwMhUdFNJfPoh32-zKEaZFcP38ELjR7gspEVRKkplUwFjEvwzmEnz07FR5fyEKFtbu1M64ie-MrnUwXf911PiP8eTXtQ=w1920-h1080-k-no');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        /* Animation for new reviews */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-house-chimney-window text-brand text-3xl ml-3"></i>
+                    <div>
+                        <h1 class="text-xl md:text-2xl font-bold text-gray-900 leading-none">شقة مجهزة للكراء اليومي</h1>
+                        <p class="text-sm text-gray-500">أزرو - Azrou</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-700 hover:text-brand font-medium">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand font-medium">عن الشقة</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-brand font-medium">الصور</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-brand font-medium">التقييمات</a>
+                </div>
+                <div>
+                    <a href="tel:0631005555" class="bg-brand hover:bg-brand-dark text-white px-5 py-2 rounded-full transition duration-300 font-bold shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-phone"></i>
+                        06 31 00 55 55
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center mt-10 md:mt-0 pt-20">
+        <div class="px-4">
+            <div class="inline-block bg-brand/90 text-white px-4 py-1 rounded-full mb-4 font-medium text-sm">
+                <i class="fa-solid fa-star text-yellow-300"></i> تقييم 5.0 ممتاز
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 drop-shadow-lg">
+                شقة مريحة وهادئة للكراء في أزرو
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto drop-shadow-md">
+                استمتع بإقامة استثنائية في شقة مفروشة بالكامل، موقع مثالي هادئ وقريب من كل المرافق الضرورية.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://wa.me/212631005555" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-bold transition duration-300 shadow-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    تواصل معنا عبر واتساب
+                </a>
+                <a href="#gallery" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-full text-lg font-bold transition duration-300 shadow-xl">
+                    شاهد صور الشقة
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">لماذا تختار شقتنا؟</h2>
+                <div class="w-24 h-1 bg-brand mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-2xl text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-brand text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">موقع استراتيجي</h3>
+                    <p class="text-gray-600">تقع الشقة في عين أغبال، أزرو. منطقة هادئة جداً وقريبة من جميع المرافق الأساسية والخدمات.</p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-2xl text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-brand text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">تجهيزات كاملة</h3>
+                    <p class="text-gray-600">صالونات تقليدية وعصرية مريحة، غرف نوم مجهزة، ومطبخ متكامل بجميع الأواني والمعدات.</p>
+                </div>
+                
+                <div class="bg-brand-light p-8 rounded-2xl text-center shadow-sm hover:shadow-md transition">
+                    <div class="w-16 h-16 bg-brand text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-6 shadow-lg">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">نظافة وراحة</h3>
+                    <p class="text-gray-600">نحرص دائماً على توفير بيئة نظيفة جداً وديكور دافئ يشعرك وكأنك في بيتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">معرض الصور</h2>
+                <div class="w-24 h-1 bg-brand mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600">خذ جولة سريعة داخل الشقة واكتشف جمالية المكان وتفاصيل الديكور</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- صور من خرائط جوجل -->
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPFt5o2W2Pwq_Ibre1ESTKvS0UU4cnSMNDqsdCa=w800-h600-k-no" alt="صورة الشقة 1" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipMpEwk4NI-hYT9Wm-9GJkuRqGs-UUk27Ze5Gw1n=w800-h600-k-no" alt="صورة الشقة 2" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOB0EmUBcB4SsUbhH8bIrND339ObXjIeQ2SCHPq=w800-h600-k-no" alt="صورة الشقة 3" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipM-V6zf8s4i7nDZyPPmWqZXBX4hDxYdFRPOhvMP=w800-h600-k-no" alt="صورة الشقة 4" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPTDK1Z-ljSuP9cJif7_GcmfriGrY8Gk3XESWQU=w800-h600-k-no" alt="صورة الشقة 5" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPlYzg_U5UJK5R4Ze421yz_PUG2F_WD1GIYN9BD=w800-h600-k-no" alt="صورة الشقة 6" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipM48G6LBUuWeRe_O_vzLkI7VXpO2w2iKs6QsbaP=w800-h600-k-no" alt="صورة الشقة 7" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNNan-YCAytnTt5hfqWLJqq1jkpxo0k6cz6T_-0=w800-h600-k-no" alt="صورة الشقة 8" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOCKHQf9g9C0DKt_dX7OyPkwmkf2NSKRVvwhLYe=w800-h600-k-no" alt="صورة الشقة 9" class="w-full h-full object-cover">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg h-64 gallery-img sm:col-span-2 lg:col-span-3">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNlrzxi5RKZxulLQYuDYQff5nA1o7qU8jMBGajx=w800-h600-k-no" alt="صورة الشقة 10" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">آراء الزوار</h2>
+                    <div class="w-24 h-1 bg-brand rounded-full mb-6"></div>
+                </div>
+                <div class="flex items-center bg-gray-50 px-6 py-4 rounded-xl shadow-sm border border-gray-100">
+                    <div class="text-4xl font-bold text-gray-900 ml-4">5.0</div>
+                    <div>
+                        <div class="text-yellow-400 text-xl mb-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="text-sm text-gray-500">من أصل 6 تقييمات على خرائط جوجل</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="reviewsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-200 absolute top-6 right-6"></i>
+                    <div class="flex items-center mb-6 z-10 relative">
+                        <div class="w-12 h-12 bg-brand text-white rounded-full flex items-center justify-center font-bold text-xl ml-4">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Abdelkarim Moudni</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed z-10 relative text-left" dir="ltr">
+                        "Very comfortable apartment, ideally located in a quiet area, in close proximity to all essential amenities."
+                    </p>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm relative">
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-200 absolute top-6 right-6"></i>
+                    <div class="flex items-center mb-6 z-10 relative">
+                        <div class="w-12 h-12 bg-gray-800 text-white rounded-full flex items-center justify-center font-bold text-xl ml-4">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Rachid Aou</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed text-lg z-10 relative text-left" dir="ltr">
+                        "Very nice place"
+                    </p>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm relative overflow-hidden">
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-200 absolute top-6 right-6"></i>
+                    <div class="flex items-center mb-6 z-10 relative">
+                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl ml-4">
+                            O
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Olivarius Hervé</h4>
+                            <div class="text-yellow-400 text-sm">
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed z-10 relative text-left break-all" dir="ltr">
+                        "Xnjckhkgngnhkkhkhgnnckcckcncncnvnvnv'c'ckc''c'vkc'cnncncng''vngjfnxncncnn🌈😠😠👰👰😠"
+                    </p>
+                </div>
+            </div>
+
+            <!-- نموذج إضافة تقييم جديد -->
+            <div class="mt-16 max-w-2xl mx-auto bg-white p-8 rounded-2xl border border-gray-100 shadow-lg">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">شاركنا تجربتك</h3>
+                    <p class="text-gray-500">أضف تقييمك ورأيك حول إقامتك في الشقة</p>
+                </div>
+                
+                <form id="reviewForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="reviewerName">الاسم الكامل</label>
+                        <input type="text" id="reviewerName" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition bg-gray-50 focus:bg-white" placeholder="اكتب اسمك هنا...">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2">تقييمك (عدد النجوم)</label>
+                        <div class="flex gap-2 text-yellow-400 text-3xl cursor-pointer justify-center md:justify-start" id="starRating">
+                            <i class="fa-solid fa-star star-btn hover:scale-110 transition-transform" data-rating="1"></i>
+                            <i class="fa-solid fa-star star-btn hover:scale-110 transition-transform" data-rating="2"></i>
+                            <i class="fa-solid fa-star star-btn hover:scale-110 transition-transform" data-rating="3"></i>
+                            <i class="fa-solid fa-star star-btn hover:scale-110 transition-transform" data-rating="4"></i>
+                            <i class="fa-solid fa-star star-btn hover:scale-110 transition-transform" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="ratingValue" value="5">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 font-medium mb-2" for="reviewText">تعليقك</label>
+                        <textarea id="reviewText" required rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition bg-gray-50 focus:bg-white resize-none" placeholder="كيف كانت إقامتك؟ ما هي الأشياء التي أعجبتك؟"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-brand hover:bg-brand-dark text-white px-8 py-4 rounded-xl text-lg font-bold transition duration-300 shadow-md flex justify-center items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> نشر التقييم
+                    </button>
+                    
+                    <!-- رسالة نجاح الإضافة -->
+                    <div id="successMessage" class="hidden bg-green-50 text-green-600 border border-green-200 p-4 rounded-xl text-center font-medium animate-fade-in">
+                        <i class="fa-solid fa-circle-check ml-1"></i> شكراً لك! تم إضافة تقييمك بنجاح وسيظهر الآن للزوار.
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-8 text-center">
+                 <a href="https://www.google.com/maps/place/%D8%B4%D9%82%D8%A9+%D9%85%D8%AC%D9%87%D8%B2%D8%A9+%D9%84%D9%84%D9%83%D8%B1%D8%A7%D8%A1+%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A+%D8%A3%D8%B2%D8%B1%D9%88%E2%80%AD/@33.4474193,-5.2229384,17z" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium underline decoration-2 underline-offset-4 transition">
+                     هل تفضل إضافة تقييمك مباشرة على خرائط جوجل؟ اضغط هنا.
+                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">معلومات التواصل والموقع</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        نحن سعداء باستقبالكم في أي وقت. يمكنكم التواصل معنا عبر الهاتف أو الواتساب للحجز أو الاستفسار عن أي معلومات إضافية.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-xl ml-4 text-brand text-2xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 block">رقم الهاتف</h4>
+                                <a href="tel:0631005555" class="text-xl font-bold hover:text-brand transition" dir="ltr">06 31 00 55 55</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-xl ml-4 text-brand text-2xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 block">العنوان</h4>
+                                <a href="https://www.google.com/maps/place/%D8%B4%D9%82%D8%A9+%D9%85%D8%AC%D9%87%D8%B2%D8%A9+%D9%84%D9%84%D9%83%D8%B1%D8%A7%D8%A1+%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A+%D8%A3%D8%B2%D8%B1%D9%88%E2%80%AD/@33.4474193,-5.2229384,17z" target="_blank" class="text-lg font-medium hover:text-brand transition block">شقة مجهزة للكراء اليومي أزرو</a>
+                                <a href="https://www.google.com/maps/place/%D8%B4%D9%82%D8%A9+%D9%85%D8%AC%D9%87%D8%B2%D8%A9+%D9%84%D9%84%D9%83%D8%B1%D8%A7%D8%A1+%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A+%D8%A3%D8%B2%D8%B1%D9%88%E2%80%AD/@33.4474193,-5.2229384,17z" target="_blank" class="text-sm text-blue-400 hover:text-blue-300 transition mt-1 inline-block"><i class="fa-solid fa-map-location-dot ml-1"></i> افتح في خرائط جوجل</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-xl ml-4 text-brand text-2xl">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm text-gray-400 block">الموقع</h4>
+                                <a href="http://monespace8confort.blogspot.com" target="_blank" class="text-lg font-medium hover:text-brand transition">monespace8confort.blogspot.com</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/212631005555" target="_blank" class="flex-1 text-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition duration-300 shadow-lg">
+                            <i class="fa-brands fa-whatsapp ml-2"></i> احجز عبر الواتساب
+                        </a>
+                        <a href="https://www.google.com/maps/place/%D8%B4%D9%82%D8%A9+%D9%85%D8%AC%D9%87%D8%B2%D8%A9+%D9%84%D9%84%D9%83%D8%B1%D8%A7%D8%A1+%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A+%D8%A3%D8%B2%D8%B1%D9%88%E2%80%AD/@33.4474193,-5.2229384,17z" target="_blank" class="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-lg font-bold transition duration-300 shadow-lg">
+                            <i class="fa-solid fa-map-location-dot ml-2"></i> موقع الشقة على الخريطة
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fake Map Area (Can be replaced with actual Google Maps iframe) -->
+                <div class="bg-gray-800 p-2 rounded-2xl shadow-2xl relative overflow-hidden h-96 group">
+                    <a href="https://www.google.com/maps/place/%D8%B4%D9%82%D8%A9+%D9%85%D8%AC%D9%87%D8%B2%D8%A9+%D9%84%D9%84%D9%83%D8%B1%D8%A7%D8%A1+%D8%A7%D9%84%D9%8A%D9%88%D9%85%D9%8A+%D8%A3%D8%B2%D8%B1%D9%88%E2%80%AD/@33.4474193,-5.2229384,17z" target="_blank" class="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold text-xl cursor-pointer">
+                        <i class="fa-solid fa-map-location-dot text-4xl mb-2"></i>
+                        انقر للفتح في خرائط جوجل
+                    </a>
+                    <!-- Embed Google Maps based on CQWG+XR Azrou -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=33.4474193,-5.2229384&hl=ar&z=16&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 0.75rem;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-8 text-center border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 شقة مجهزة للكراء اليومي أزرو. جميع الحقوق محفوظة.</p>
+            <p class="text-sm mt-2">Holiday apartment rental - Ain aghbal, Azrou</p>
+        </div>
+    </footer>
+
+    <!-- سكربت تفاعل التقييمات -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // منطق تفاعل النجوم (تغيير اللون عند الضغط)
+            const stars = document.querySelectorAll('.star-btn');
+            const ratingInput = document.getElementById('ratingValue');
+
+            stars.forEach(star => {
+                star.addEventListener('click', () => {
+                    const rating = parseInt(star.getAttribute('data-rating'));
+                    ratingInput.value = rating;
+                    
+                    // تحديث لون النجوم بناءً على الاختيار
+                    stars.forEach(s => {
+                        const sRating = parseInt(s.getAttribute('data-rating'));
+                        if(sRating <= rating) {
+                            s.classList.remove('text-gray-300');
+                            s.classList.add('text-yellow-400');
+                        } else {
+                            s.classList.remove('text-yellow-400');
+                            s.classList.add('text-gray-300');
+                        }
+                    });
+                });
+            });
+
+            // منطق إرسال النموذج وإضافة التعليق للصفحة
+            document.getElementById('reviewForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('reviewerName').value;
+                const text = document.getElementById('reviewText').value;
+                const rating = document.getElementById('ratingValue').value;
+                
+                // إنشاء عنصر HTML للتعليق الجديد
+                const newReview = document.createElement('div');
+                newReview.className = 'bg-white p-8 rounded-2xl border-2 border-brand shadow-md relative overflow-hidden animate-fade-in';
+                
+                // إنشاء شكل النجوم بحسب التقييم
+                let starsHtml = '';
+                for(let i=1; i<=5; i++) {
+                    if(i <= rating) starsHtml += '<i class="fa-solid fa-star"></i>';
+                    else starsHtml += '<i class="fa-solid fa-star text-gray-300"></i>';
+                }
+
+                // الحرف الأول من الاسم للعرض في الدائرة
+                const initial = name.charAt(0).toUpperCase();
+
+                // ألوان عشوائية للدائرة لتكون مميزة
+                const colors = ['bg-brand', 'bg-blue-600', 'bg-green-600', 'bg-purple-600', 'bg-red-500'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+                newReview.innerHTML = `
+                    <div class="absolute top-0 right-0 bg-brand text-white text-xs font-bold px-3 py-1 rounded-bl-lg">جديد</div>
+                    <i class="fa-solid fa-quote-right text-4xl text-gray-100 absolute top-6 right-6"></i>
+                    <div class="flex items-center mb-6 z-10 relative">
+                        <div class="w-12 h-12 ${randomColor} text-white rounded-full flex items-center justify-center font-bold text-xl ml-4 shadow-sm">
+                            ${initial}
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900">${name}</h4>
+                            <div class="text-yellow-400 text-sm">
+                                ${starsHtml}
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed z-10 relative font-medium">
+                        "${text}"
+                    </p>
+                    <div class="text-xs text-gray-400 mt-4"><i class="fa-regular fa-clock ml-1"></i> أضيف للتو</div>
+                `;
+                
+                // إدراج التعليق الجديد في بداية قائمة التعليقات
+                const reviewsGrid = document.getElementById('reviewsGrid');
+                reviewsGrid.insertBefore(newReview, reviewsGrid.firstChild);
+                
+                // إظهار رسالة النجاح وتفريغ الحقول
+                const successMsg = document.getElementById('successMessage');
+                successMsg.classList.remove('hidden');
+                this.reset();
+                
+                // إعادة تعيين النجوم إلى 5
+                ratingInput.value = 5;
+                stars.forEach(s => {
+                    s.classList.remove('text-gray-300');
+                    s.classList.add('text-yellow-400');
+                });
+
+                // إخفاء رسالة النجاح بعد 5 ثواني
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
